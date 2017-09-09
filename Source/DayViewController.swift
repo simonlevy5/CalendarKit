@@ -3,7 +3,7 @@ import DateToolsSwift
 
 open class DayViewController: UIViewController, EventDataSource, DayViewDelegate {
 
-  public lazy var dayView: DayView = DayView()
+  public var dayView: DayView = DayView()
 
   override open func viewDidLoad() {
     super.viewDidLoad()

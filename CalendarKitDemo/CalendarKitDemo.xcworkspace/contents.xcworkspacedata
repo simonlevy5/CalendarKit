@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CalendarKit/CalendarKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CalendarKitDemo.xcodeproj">
    </FileRef>
    <FileRef

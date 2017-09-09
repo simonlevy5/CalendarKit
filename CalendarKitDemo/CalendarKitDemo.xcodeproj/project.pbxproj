@@ -27,6 +27,7 @@
 		79413AEA1F01088C00A9448E /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
 		798DE8621E4A8B4F00486CDC /* StyleGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGenerator.swift; sourceTree = "<group>"; };
 		881D3E4878A988B8B04CD379 /* Pods-CalendarKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarKitDemo/Pods-CalendarKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FEBE3D2E2A69785960AD5A0D /* Pods-CalendarKitDemo.debugtest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarKitDemo.debugtest.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarKitDemo/Pods-CalendarKitDemo.debugtest.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 			children = (
 				7332CB1116326D24149EE2D6 /* Pods-CalendarKitDemo.debug.xcconfig */,
 				881D3E4878A988B8B04CD379 /* Pods-CalendarKitDemo.release.xcconfig */,
+				FEBE3D2E2A69785960AD5A0D /* Pods-CalendarKitDemo.debugtest.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -341,6 +343,69 @@
 			};
 			name = Release;
 		};
+		F4FFF7941F649CCD00EF1244 /* DebugTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugTest;
+		};
+		F4FFF7951F649CCD00EF1244 /* DebugTest */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBE3D2E2A69785960AD5A0D /* Pods-CalendarKitDemo.debugtest.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CalendarKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hyper.CalendarKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = DebugTest;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -348,6 +413,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				793B14EA1BD6815D00961414 /* Debug */,
+				F4FFF7941F649CCD00EF1244 /* DebugTest */,
 				793B14EB1BD6815D00961414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -357,6 +423,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				793B14ED1BD6815D00961414 /* Debug */,
+				F4FFF7951F649CCD00EF1244 /* DebugTest */,
 				793B14EE1BD6815D00961414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
