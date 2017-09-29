@@ -5,14 +5,15 @@ class CurrentTimeIndicator: UIView {
 
   var leftInset: CGFloat = 53
 
-  var is24hClock = true
+  var is24hClock = true {
+    didSet {
+      self.updateDate(date)
+    }
+  }
 
   var date = Date() {
     didSet {
-      let dateFormat = is24hClock ? "HH:mm" : "h:mm a"
-      timeLabel.text = date.format(with: dateFormat)
-      timeLabel.sizeToFit()
-      setNeedsLayout()
+      self.updateDate(date)
     }
   }
 
@@ -48,6 +49,13 @@ class CurrentTimeIndicator: UIView {
     circle.frame = CGRect(x: leftInset + 1, y: 0, width: 6, height: 6)
     circle.center.y = line.center.y
     circle.layer.cornerRadius = circle.bounds.height / 2
+  }
+  
+  func updateDate(_ date: Date) {
+    let dateFormat = is24hClock ? "HH:mm" : "h:mm a"
+    timeLabel.text = date.format(with: dateFormat)
+    timeLabel.sizeToFit()
+    setNeedsLayout()
   }
 
   func updateStyle(_ newStyle: CurrentTimeIndicatorStyle) {
