@@ -80,6 +80,7 @@ class ExampleController: DayViewController, DatePickerControllerDelegate {
       style = StyleGenerator.darkStyle()
       currentStyle = .Dark
     }
+    style.timeline.is24Hour = false
     updateStyle(style)
     navigationItem.rightBarButtonItem!.title = title
     navigationController?.navigationBar.barTintColor = style.header.backgroundColor

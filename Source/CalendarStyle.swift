@@ -84,6 +84,7 @@ public class SwipeLabelStyle: NSCopying {
 }
 
 public class TimelineStyle: NSCopying {
+  public var is24Hour = true
   public var timeIndicator = CurrentTimeIndicatorStyle()
   public var timeColor = UIColor.lightGray
   public var lineColor = UIColor.lightGray
@@ -97,6 +98,7 @@ public class TimelineStyle: NSCopying {
     copy.lineColor = lineColor
     copy.backgroundColor = backgroundColor
     copy.font = font
+    copy.is24Hour = is24Hour
     return copy
   }
 }
